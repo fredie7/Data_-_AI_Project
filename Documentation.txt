@@ -1,0 +1,29 @@
+
+Missing values on the transactions data
+=======================================
+customer_id          30
+currency          24644
+category          20220
+
+Transactions without a customer_id were excluded as they cannot support customer-level 
+analytics or even AI use cases, plus are so few.
+
+Missing categories were assigned to an "unknown" bucket to preserve transaction completeness.
+
+To prevent downstream inconsistencies:
+Domain knowledge has it that asides the NOK and SEK, the EUR represents
+a standard base currency accross the Nordics where our client is from.
+So, first I replicated the missing currency values in a separate column called "currency_imputed" for
+financial lineage tracking, then replaced the missing currencies with the EUR on the currency column. 
+I normalized all currency codes to uppercase ISO format as well, then, mapped eur into EUR.
+
+For the mamoth 2000 duplicate transaction_id's in the transaction data, I 
+investigated the timestamp,amount and customer for possible late-arriving data and pipeline retries to retain the
+the most recent version.
+I deleted the missing values since none of those factors seemed concurrently repititive..
+
+
+ALERT:
+This is to report that the emails of all customers appear similar
+and standard practice requires that I report such error to the source for a 
+redress...

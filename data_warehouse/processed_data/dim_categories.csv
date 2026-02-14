@@ -1,0 +1,4 @@
+category_key,category,is_refundable,return_window_days,transaction_timestamp
+1,Electronics,True,30,2020-01-01 00:24:00
+2,unknown,False,0,2020-01-01 00:24:00
+3,Food,False,0,2020-01-01 00:24:00

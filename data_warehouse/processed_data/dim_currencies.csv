@@ -1,0 +1,4 @@
+currency_key,base_currency,transaction_currency,currency_imputed,conversion_type,transaction_timestamp,exchange_rate_source
+1,EUR,EUR,True,imputed,2020-01-01 00:24:00,https://www.oanda.com/currency-converter
+2,EUR,SEK,True,imputed,2020-01-01 00:24:00,https://www.oanda.com/currency-converter
+3,EUR,NOK,True,imputed,2020-01-01 00:24:00,https://www.oanda.com/currency-converter
